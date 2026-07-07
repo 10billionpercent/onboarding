@@ -10,5 +10,3 @@ Critical rendering path is the sequence of steps followed by the browser to disp
 - Next the browser combines the DOM and CSSOM trees to create the render tree, which contains only the visible content. Nodes with `display: none;` and their children are not included in this tree.
 - Next the browser performs layout, which is the process of determining how and where the elements should be placed on the page. It calculates the width, height and relative position of each element with respect to each other. Layout takes longer when the DOM tree has a larger number of nodes. This process happens each time the render tree is modified.
 - Finally the browser paints the pixels onto the screen using the layout calculations. The complete page is painted only on load, and after that, only the changed parts are repainted. Painting is a very fast process in general, but depends on what is changing in the render tree.
-
-- 
