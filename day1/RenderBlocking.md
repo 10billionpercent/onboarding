@@ -1,0 +1,5 @@
+Render blocking resources are the resources that cause the browser to pause rendering the page until processed.
+CSS falls under this category by default.
+Modern browsers block rendering of only the content that is below the render blocking resource. So if such a resource is in `<head>`, it blocks the rendering of the entire page. So it slows down the rendering and the perceived speed of the website becomes much lesser. Non critical CSS can be given the `media` atttribute with values like `print` to ensure that they are downloaded only when required (here, during printing).
+JS files can be made non blocking by using `async` or `defer` attribute in the `<script>` tag, placed after the `</body>` instead of `<head>`. If `async` is used, the script is executed immediately after downloading, regardless of the order in the document. Whereas if `defer` is used, the script is downloaded asynchronously too, but it is executed in the order of appearance in the document, and only after all the HTML has been parsed.
+Hence render blocking resources like CSS and JS should be handled appropriately to ensure that the critical rendering path is not blocked unnecessarily.
