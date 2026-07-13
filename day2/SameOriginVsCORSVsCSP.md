@@ -1,2 +1,2 @@
 Two URLs are said to have the same origin if they have the same protocol (HTTP/HTTPS etc), port and host.
-Same origin policy blocks scripts on one origin from accessing or modifying data on other origins. It prevents DOM access, storage (localStorage, sessionStorage, IndexedDB) access and the sending of network requests to another origin.
+Same origin policy blocks scripts on one origin from accessing or modifying resources on other origins. It prevents DOM access, storage (localStorage, sessionStorage, IndexedDB) access and the reading of cross-origin responses unless explicitly permitted.
